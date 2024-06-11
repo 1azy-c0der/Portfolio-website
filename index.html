@@ -1,294 +1,250 @@
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 
-export default function Component() {
-  return (
-    <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link href="#" className="flex items-center justify-center" prefetch={false}>
-          <CodeIcon className="h-6 w-6" />
-          <span className="sr-only">Portfolio</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6 md:hidden">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="w-8 h-8 hover:bg-transparent text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-          >
-            <MenuIcon className="w-6 h-6" />
-            <span className="sr-only">Toggle menu</span>
-          </Button>
-        </nav>
-        <nav className="hidden md:flex gap-4 sm:gap-6">
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Home
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Projects
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            About
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-      </header>
-      <main className="flex-1">
-        <section id="hero" className="w-full pt-12 md:pt-24 lg:pt-32">
-          <div className="container space-y-10 xl:space-y-16 px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Hi, I'm John Doe
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  I'm a full-stack developer with a passion for creating beautiful and functional web applications.
-                </p>
-              </div>
-              <div className="space-x-4 flex flex-col sm:flex-row items-center">
-                <Link
-                  href="#"
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 mb-2 sm:mb-0"
-                  prefetch={false}
-                >
-                  View Projects
-                </Link>
-                <Link
-                  href="#"
-                  className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                  prefetch={false}
-                >
-                  Contact Me
-                </Link>
-              </div>
-            </div>
+<div class="flex flex-col min-h-[100dvh]">
+  <header class="px-4 lg:px-6 h-14 flex items-center">
+    <a class="flex items-center justify-center" href="#">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-6 w-6"
+      >
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+      <span class="sr-only">Portfolio</span>
+    </a>
+    <nav class="ml-auto flex gap-4 sm:gap-6 md:hidden">
+      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 w-8 h-8 hover:bg-transparent text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-6 h-6"
+        >
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+        <span class="sr-only">Toggle menu</span>
+      </button>
+    </nav>
+    <nav class="hidden md:flex gap-4 sm:gap-6">
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+        Home
+      </a>
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+        Projects
+      </a>
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+        About
+      </a>
+      <a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+        Contact
+      </a>
+    </nav>
+  </header>
+  <main class="flex-1">
+    <section id="hero" class="w-full pt-12 md:pt-24 lg:pt-32">
+      <div class="container space-y-10 xl:space-y-16 px-4 md:px-6">
+        <div class="flex flex-col items-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              Hi, I'm Niyati
+            </h1>
+            <p class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+              I'm a full-stack developer with a passion for creating beautiful and functional we
+            </p>
           </div>
-        </section>
-        <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Projects</h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Check out some of the projects I've worked on.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12 md:grid-cols-2 sm:grid-cols-1">
-              <div className="grid gap-4">
-                <Card>
-                  <img
-                    src="/placeholder.svg"
-                    width="550"
-                    height="310"
-                    alt="Project 1"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  />
-                  <CardContent className="space-y-2">
-                    <h3 className="text-xl font-bold">Project 1</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      A web application that helps users manage their tasks and projects.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <img
-                    src="/placeholder.svg"
-                    width="550"
-                    height="310"
-                    alt="Project 2"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  />
-                  <CardContent className="space-y-2">
-                    <h3 className="text-xl font-bold">Project 2</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      A mobile app that helps users track their fitness goals.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="grid gap-4">
-                <Card>
-                  <img
-                    src="/placeholder.svg"
-                    width="550"
-                    height="310"
-                    alt="Project 3"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  />
-                  <CardContent className="space-y-2">
-                    <h3 className="text-xl font-bold">Project 3</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      A web application that helps users manage their e-commerce store.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <img
-                    src="/placeholder.svg"
-                    width="550"
-                    height="310"
-                    alt="Project 4"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  />
-                  <CardContent className="space-y-2">
-                    <h3 className="text-xl font-bold">Project 4</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      A web application that helps users manage their personal finances.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+          <div class="space-x-4 flex flex-col sm:flex-row items-center">
+            <a
+              href="#"
+              class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 mb-2 sm:mb-0"
+            >
+              View Projects
+            </a>
+            <a
+              href="#"
+              class="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+            >
+              Contact Me
+            </a>
           </div>
-        </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">About Me</h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  I'm a full-stack developer with over 5 years of experience. I specialize in building modern,
-                  responsive web applications using the latest technologies.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 md:grid-cols-2 sm:grid-cols-1">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="grid gap-4">
-                  <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">Frontend</h3>
-                    <p className="text-gray-500 dark:text-gray-400">
-                      React, Next.js, TypeScript, HTML, CSS, JavaScript
-                    </p>
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">Backend</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Node.js, Express, MongoDB, PostgreSQL</p>
-                  </div>
-                  <div className="grid gap-1">
-                    <h3 className="text-xl font-bold">Tools</h3>
-                    <p className="text-gray-500 dark:text-gray-400">Git, GitHub, Figma, Postman, VS Code</p>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">My Projects</h2>
+            <p class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Check out some of the projects I've worked on.
+            </p>
+          </div>
+        </div>
+        <div class="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12 md:grid-cols-2 sm:grid-cols-1">
+          <div class="grid gap-4">
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
               <img
                 src="/placeholder.svg"
                 width="550"
                 height="310"
-                alt="About"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                alt="Project 1"
+                class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
               />
+              <div class="p-6 space-y-2">
+                <h3 class="text-xl font-bold">Project 1</h3>
+                <p class="text-gray-500 dark:text-gray-400">
+                  A web application that helps users manage their tasks and projects.
+                </p>
+              </div>
+            </div>
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+              <img
+                src="/placeholder.svg"
+                width="550"
+                height="310"
+                alt="Project 2"
+                style=""
+                class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+              />
+              <div class="p-6 space-y-2">
+                <h3 class="text-xl font-bold">Project 2</h3>
+                <p class="text-gray-500 dark:text-gray-400">
+                  A mobile app that helps users track their fitness goals.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container grid items-center justify-center gap-4 px-4 md:px-6">
-            <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Get in Touch</h2>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                I'd love to hear from you! Feel free to reach out with any questions or inquiries.
-              </p>
+          <div class="grid gap-4">
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+              <img
+                src="/placeholder.svg"
+                width="550"
+                height="310"
+                alt="Project 3"
+                style=""
+                class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+              />
+              <div class="p-6 space-y-2">
+                <h3 class="text-xl font-bold">Project 3</h3>
+                <p class="text-gray-500 dark:text-gray-400">
+                  A web application that helps users manage their e-commerce store.
+                </p>
+              </div>
             </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex flex-col space-y-2">
-                <Input type="text" placeholder="Name" className="max-w-lg flex-1" />
-                <Input type="email" placeholder="Email" className="max-w-lg flex-1" />
-                <Textarea placeholder="Message" className="max-w-lg flex-1" />
-                <Button type="submit" className="self-end">
-                  Submit
-                </Button>
-              </form>
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+              <img
+                src="/placeholder.svg"
+                width="550"
+                height="310"
+                alt="Project 4"
+                class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+              />
+              <div class="p-6 space-y-2">
+                <h3 class="text-xl font-bold">Project 4</h3>
+                <p class="text-gray-500 dark:text-gray-400">
+                  A web application that helps users manage their personal finances.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">&copy; 2024 John Doe. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Privacy
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
-            Terms of Service
-          </Link>
-        </nav>
-      </footer>
-    </div>
-  )
-}
-
-function CodeIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="16 18 22 12 16 6" />
-      <polyline points="8 6 2 12 8 18" />
-    </svg>
-  )
-}
-
-
-function MenuIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" x2="20" y1="12" y2="12" />
-      <line x1="4" x2="20" y1="6" y2="6" />
-      <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  )
-}
-body {
-  font-family: var(--font-arimo), sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-arimo), sans-serif;
-}
-                  // This is the root layout component for your Next.js app.
-// Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
-
-import { Arimo } from 'next/font/google'
-import './styles.css'
-
-const arimo = Arimo({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-arimo',
-})
-
-export default function Layout({ children }) {
-  return (
-    <html lang="en">
-      <body className={arimo.variable}>
-        {children}
-      </body>
-    </html>
-  )
-}
+        </div>
+      </div>
+    </section>
+    <section id="about" class="w-full py-12 md:py-24 lg:py-32">
+      <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">About Me</h2>
+            <p class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              I'm a full-stack developer with over 5 years of experience. I specialize in building modern,
+              responsive web applications using the latest technologies.m a full-stack developer with over 5 years
+              of
+            </p>
+          </div>
+        </div>
+        <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 md:grid-cols-2 sm:grid-cols-1">
+          <div class="flex flex-col justify-center space-y-4">
+            <div class="grid gap-4">
+              <div class="grid gap-1">
+                <h3 class="text-xl font-bold">Frontend</h3>
+                <p class="text-gray-500 dark:text-gray-400">React, Next.js, TypeScript, HTML, CSS, JavaScript</p>
+              </div>
+              <div class="grid gap-1">
+                <h3 class="text-xl font-bold">Backend</h3>
+                <p class="text-gray-500 dark:text-gray-400">Node.js, Express, MongoDB, PostgreSQL</p>
+              </div>
+              <div class="grid gap-1">
+                <h3 class="text-xl font-bold">Tools</h3>
+                <p class="text-gray-500 dark:text-gray-400">Git, GitHub, Figma, Postman, VS Code</p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="/placeholder.svg"
+            width="550"
+            height="310"
+            alt="About"
+            class="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+      <div class="container grid items-center justify-center gap-4 px-4 md:px-6">
+        <div class="space-y-3">
+          <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Get in Touch</h2>
+          <p class="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            I'd love to hear from you! Feel free to reach out with any q
+          </p>
+        </div>
+        <div class="mx-auto w-full max-w-sm space-y-2">
+          <form class="flex flex-col space-y-2">
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-w-lg flex-1"
+              placeholder="Name"
+              type="text"
+            />
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-w-lg flex-1"
+              placeholder="Email"
+              type="email"
+            />
+            <textarea
+              class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-w-lg flex-1"
+              placeholder="Message"
+            ></textarea>
+            <button
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 self-end"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+    <p class="text-xs text-gray-500 dark:text-gray-400">© 2024 John Doe. All rights reserved.</p>
+    <nav class="sm:ml-auto flex gap-4 sm:gap-6">
+      <a class="text-xs hover:underline underline-offset-4" href="#">
+        Privacy
+      </a>
+    </nav>
+  </footer>
+</div>
