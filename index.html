@@ -48,8 +48,8 @@ export default function Component() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Hi, I'm Niyati Malla
-                                </h1>
+                  Hi, I'm John Doe
+                </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                   I'm a full-stack developer with a passion for creating beautiful and functional web applications.
                 </p>
@@ -266,5 +266,33 @@ function MenuIcon(props) {
       <line x1="4" x2="20" y1="6" y2="6" />
       <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
+  )
+}
+body {
+  font-family: var(--font-arimo), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-arimo), sans-serif;
+}
+                  // This is the root layout component for your Next.js app.
+// Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
+
+import { Arimo } from 'next/font/google'
+import './styles.css'
+
+const arimo = Arimo({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-arimo',
+})
+
+export default function Layout({ children }) {
+  return (
+    <html lang="en">
+      <body className={arimo.variable}>
+        {children}
+      </body>
+    </html>
   )
 }
