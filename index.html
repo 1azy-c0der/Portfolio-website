@@ -1,11 +1,264 @@
-<head>
-<body>
-<div>
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/RlSnkhzxd1V
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import Link from "next/link"
 
-<h1> WHOOPS!! </h1>
- <h2> THIS WEBSITE IS UNDER CONSTRUCTION. </h2>
- <h3> PLEASE COME BACK LATER.</h3>
-         
-  <img scr="https://raw.githubusercontent.com/1azy-c0der/Portfolio-website/816cd55e0f8a5435033312f811a0c825d8d44c08/library/Screenshot%20(231).png">
-</body>
-</html>
+export default function Component() {
+  return (
+    <div className="flex flex-col min-h-[100dvh]">
+      <header className="px-4 lg:px-6 h-14 flex items-center">
+        <Link href="#" className="flex items-center justify-center" prefetch={false}>
+          <MountainIcon className="h-6 w-6" />
+          <span className="sr-only">Portfolio</span>
+        </Link>
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            About
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Experience
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Projects
+          </Link>
+          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Skills
+          </Link>
+        </nav>
+      </header>
+      <main className="flex-1">
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 grid gap-8 lg:grid-cols-2 lg:gap-16">
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">John Doe</h1>
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">Software Engineer</h2>
+              <p className="text-gray-500 md:text-xl dark:text-gray-400">
+                I'm a passionate software engineer with a strong background in full-stack web development. I love
+                building innovative solutions that solve real-world problems.
+              </p>
+            </div>
+            <img
+              src="/placeholder.svg"
+              width="550"
+              height="550"
+              alt="John Doe"
+              className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
+            />
+          </div>
+        </section>
+        <section id="experience" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+          <div className="container px-4 md:px-6 space-y-12">
+            <div className="space-y-4 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Work Experience</h2>
+              <p className="text-gray-500 md:text-xl dark:text-gray-400">
+                Check out my professional experience and achievements.
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50">
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">Software Engineer</h3>
+                  <p className="text-gray-500 dark:text-gray-400">Acme Inc. | 2020 - Present</p>
+                  <p>
+                    Developed and maintained complex web applications using React, Node.js, and various other
+                    technologies.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50">
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">Intern</h3>
+                  <p className="text-gray-500 dark:text-gray-400">Globex Corp. | 2019 - 2020</p>
+                  <p>Gained hands-on experience in web development and participated in various projects.</p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50">
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">Student Developer</h3>
+                  <p className="text-gray-500 dark:text-gray-400">University of Somewhere | 2016 - 2020</p>
+                  <p>Contributed to open-source projects and participated in hackathons during my university years.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 space-y-12">
+            <div className="space-y-4 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
+              <p className="text-gray-500 md:text-xl dark:text-gray-400">
+                Check out some of the projects I've worked on.
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50">
+                <img
+                  src="/placeholder.svg"
+                  width="550"
+                  height="310"
+                  alt="Project 1"
+                  className="rounded-t-lg aspect-video object-cover"
+                />
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">Project 1</h3>
+                  <p>A web application that helps users manage their daily tasks and to-do lists.</p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50">
+                <img
+                  src="/placeholder.svg"
+                  width="550"
+                  height="310"
+                  alt="Project 2"
+                  className="rounded-t-lg aspect-video object-cover"
+                />
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">Project 2</h3>
+                  <p>A responsive e-commerce website that allows users to browse and purchase products.</p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50">
+                <img
+                  src="/placeholder.svg"
+                  width="550"
+                  height="310"
+                  alt="Project 3"
+                  className="rounded-t-lg aspect-video object-cover"
+                />
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">Project 3</h3>
+                  <p>A data visualization dashboard that displays real-time analytics and insights.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+          <div className="container px-4 md:px-6 space-y-12">
+            <div className="space-y-4 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Skills</h2>
+              <p className="text-gray-500 md:text-xl dark:text-gray-400">
+                Check out my proficiencies in various technologies.
+              </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50 p-6 space-y-4">
+                <h3 className="text-xl font-bold">Front-end</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span>React</span>
+                    <span className="font-bold">90%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "90%" }} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>JavaScript</span>
+                    <span className="font-bold">85%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "85%" }} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>CSS/SCSS</span>
+                    <span className="font-bold">80%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "80%" }} />
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50 p-6 space-y-4">
+                <h3 className="text-xl font-bold">Back-end</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span>Node.js</span>
+                    <span className="font-bold">85%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "85%" }} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Express</span>
+                    <span className="font-bold">80%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "80%" }} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>MongoDB</span>
+                    <span className="font-bold">75%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "75%" }} />
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-md dark:bg-gray-950 dark:text-gray-50 p-6 space-y-4">
+                <h3 className="text-xl font-bold">Tools</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span>Git</span>
+                    <span className="font-bold">90%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "90%" }} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Docker</span>
+                    <span className="font-bold">80%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "80%" }} />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>AWS</span>
+                    <span className="font-bold">75%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                    <div className="h-2 bg-gray-900 rounded-full dark:bg-gray-50" style={{ width: "75%" }} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
+        <p className="text-xs text-gray-500 dark:text-gray-400">&copy; 2024 John Doe. All rights reserved.</p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+            LinkedIn
+          </Link>
+          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+            GitHub
+          </Link>
+          <Link href="#" className="text-xs hover:underline underline-offset-4" prefetch={false}>
+            Twitter
+          </Link>
+        </nav>
+      </footer>
+    </div>
+  )
+}
+
+function MountainIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+    </svg>
+  )
+}
